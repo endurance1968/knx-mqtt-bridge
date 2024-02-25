@@ -31,11 +31,9 @@ the configuration file.
 
 ## Install
 
-`npm install -g knx-mqtt-bridge`
-
-## Run
-
- `KNX_MQTT_CONFIG=config.yaml knx-mqtt-bridge`
+Docker Anleitung findet Ihr unter: https://www.elektrifiziert.net/blog/index.php?entry/177-knx-to-mqtt/
+Ab hier wieder Originaltext - ich supporte nur Dockerinstallation - von daher habe ich den entsprechende 
+baremetall Abschnitt entfernt.
 
 ## Configuring
 See config.example.yaml for a configuration example. By default, the bridge will
@@ -56,16 +54,6 @@ like so: `knx/x/y/z/write/dpt1`. For instance, if you would want to send a
 `mosquitto_pub -h localhost -t 'knx/1/1/65/write/dpt1' -m "{\"type\":\"Buffer\",\"data\":[1]}"`.
 For any datapoint other than dpt1, dpt2 or dpt3 you don't need to pass that
 additional information.
-
-## Dependencies
-
-Package | Version | Dev
---- |:---:|:---:
-[js-yaml](https://www.npmjs.com/package/js-yaml) | 3.12.0 | ✖
-[knx](https://www.npmjs.com/package/knx) | >=2.3.0 | ✖
-[mqtt](https://www.npmjs.com/package/mqtt) | ^2.18.1 | ✖
-[winston](https://www.npmjs.com/package/winston) | 3.0.0 | ✖
-[xml-js](https://www.npmjs.com/package/xml-js) | 1.6.4 | ✖
 
 ## License
 
